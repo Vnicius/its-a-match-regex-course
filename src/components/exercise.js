@@ -32,13 +32,14 @@ const Exercise = ({ id, title, type, children }) => {
         [classes.expanded]: isExpanded,
         [classes.wide]: isExpanded && type === 'slides',
         [classes.completed]: !isExpanded && isCompleted,
+        [classes.focused]: !isExpanded && !isCompleted,
     })
     const titleClassNames = classNames(classes.title, {
         [classes.titleExpanded]: isExpanded,
     })
     return (
-        <section ref={excRef} id={id} className={rootClassNames}>
-            <h2 className={titleClassNames} onClick={handleExpand}>
+        <section ref={excRef} id={id} className={rootClassNames} onClick={handleExpand}>
+            <h2 className={titleClassNames}>
                 <span>
                     <span
                         className={classNames(classes.id, { [classes.idCompleted]: isCompleted })}

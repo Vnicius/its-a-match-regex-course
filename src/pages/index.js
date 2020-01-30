@@ -18,18 +18,12 @@ export default ({ data }) => {
         <Layout isHome>
             <Logo className={classes.logo} aria-label={siteMetadata.title} />
             {chapters.map(({ slug, title, description }) => (
-                <section key={slug} className={classes.chapter}>
-                    <h2 className={classes.chapterTitle}>
-                        <Link hidden to={slug}>
-                            {title}
-                        </Link>
-                    </h2>
-                    <p className={classes.chapterDesc}>
-                        <Link hidden to={slug}>
-                            {description}
-                        </Link>
-                    </p>
-                </section>
+                <Link hidden to={slug}>
+                    <section key={slug} className={classes.chapter}>
+                        <h2 className={classes.chapterTitle}>{title}</h2>
+                        <p className={classes.chapterDesc}>{description}</p>
+                    </section>
+                </Link>
             ))}
         </Layout>
     )
