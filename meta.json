@@ -1,15 +1,15 @@
 {
-    "courseId": "course-starter-python",
-    "title": "My cool online course",
-    "slogan": "A free online course",
+    "courseId": "its-a-match-regex-course",
+    "title": "It's A Match: Curso de Expressões Regulares",
+    "slogan": "Um curso gratuito de regex!",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique libero at est congue, sed vestibulum tortor laoreet. Aenean egestas massa non commodo consequat. Curabitur faucibus, sapien vitae euismod imperdiet, arcu erat semper urna, in accumsan sapien dui ac mi. Pellentesque felis lorem, semper nec velit nec, consectetur placerat enim.",
     "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique libero at est congue, sed vestibulum tortor laoreet. Aenean egestas massa non commodo consequat. Curabitur faucibus, sapien vitae euismod imperdiet, arcu erat semper urna.",
-    "siteUrl": "https://course-starter-python.netlify.com",
-    "twitter": "spacy_io",
+    "siteUrl": "https://github.com/Vnicius/its-a-match-regex-course/settings",
+    "twitter": "devnicius",
     "fonts": "IBM+Plex+Mono:500|IBM+Plex+Sans:700|Lato:400,400i,700,700i",
     "testTemplate": "from wasabi import Printer\n__msg__ = Printer()\n__solution__ = \"\"\"${solution}\"\"\"\n\n${solution}\n\n${test}\n\ntry:\n    test()\nexcept AssertionError as e:\n    __msg__.fail(e)",
     "juniper": {
-        "repo": "ines/course-starter-python",
+        "repo": "Vnicius/its-a-match-regex-course",
         "branch": "binder",
         "lang": "python",
         "kernelType": "python3",
@@ -17,9 +17,12 @@
     },
     "showProfileImage": true,
     "footerLinks": [
-        { "text": "Website", "url": "https://spacy.io" },
-        { "text": "Source", "url": "https://github.com/ines/course-starter-python" },
+        {
+            "text": "Website",
+            "url": "https://github.com/Vnicius/its-a-match-regex-course/settings"
+        },
+        { "text": "Source", "url": "https://github.com/Vnicius/its-a-match-regex-course/settings" },
         { "text": "Built with ♥", "url": "https://github.com/ines/course-starter-python" }
     ],
-    "theme": "#de7878"
+    "theme": "#FE3C72"
 }
