@@ -1,11 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import classNames from 'classnames'
 import Layout from '../components/layout'
 import { Link } from '../components/link'
 import Logo from '../../static/logo.svg'
 
 import classes from '../styles/index.module.sass'
+import focusClasses from '../styles/focus.module.sass'
 
 export default ({ data }) => {
     const siteMetadata = data.site.siteMetadata
@@ -14,22 +16,17 @@ export default ({ data }) => {
         title: node.frontmatter.title,
         description: node.frontmatter.description,
     }))
+    const chapterClassName = classNames(classes.chapter, focusClasses.focused)
     return (
         <Layout isHome>
             <Logo className={classes.logo} aria-label={siteMetadata.title} />
             {chapters.map(({ slug, title, description }) => (
-                <section key={slug} className={classes.chapter}>
-                    <h2 className={classes.chapterTitle}>
-                        <Link hidden to={slug}>
-                            {title}
-                        </Link>
-                    </h2>
-                    <p className={classes.chapterDesc}>
-                        <Link hidden to={slug}>
-                            {description}
-                        </Link>
-                    </p>
-                </section>
+                <Link hidden to={slug}>
+                    <section key={slug} className={chapterClassName}>
+                        <h2 className={classes.chapterTitle}>{title}</h2>
+                        <p className={classes.chapterDesc}>{description}</p>
+                    </section>
+                </Link>
             ))}
         </Layout>
     )

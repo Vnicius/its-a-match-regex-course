@@ -5,6 +5,7 @@ import { Button, CompleteButton } from './button'
 import { ChapterContext } from '../context'
 import IconSlides from '../../static/icon_slides.svg'
 import classes from '../styles/exercise.module.sass'
+import focusClasses from '../styles/focus.module.sass'
 
 const Exercise = ({ id, title, type, children }) => {
     const excRef = useRef()
@@ -32,6 +33,7 @@ const Exercise = ({ id, title, type, children }) => {
         [classes.expanded]: isExpanded,
         [classes.wide]: isExpanded && type === 'slides',
         [classes.completed]: !isExpanded && isCompleted,
+        [focusClasses.focused]: !isExpanded && !isCompleted,
     })
     const titleClassNames = classNames(classes.title, {
         [classes.titleExpanded]: isExpanded,
